@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: app
+    volumes:
+      - .:/app:cached
+      - ~/.ssh:/root/.ssh
+      - ~/.bash_history:/root/.bash_history
+    command: sh -c
